@@ -1,0 +1,155 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --pink-color: #ef476f;
+  --yellow-color: #f5ab00;
+  --light-green: #06d6a0;
+  --blue-color: #118ab2;
+  --white: #ffffff;
+  --backgroung-color: #fff8ea;
+  --font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+body {
+  height: 100%;
+}
+
+/*main {
+  background-color: var(--backgroung-color);
+  height: 100vh;
+}*/
+.main-page {
+  background-image: url(/coffee.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.header {
+  height: 7em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pink-color);
+  gap: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--white);
+  text-shadow: 4px 2px var(--blue-color), 8px 4px var(--yellow-color);
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+p {
+  background: linear-gradient(to left, #aa4b6b, #3b8d99);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+h2,
+label {
+  color: #7d6e83;
+}
+
+#todo-list label {
+  color: white;
+}
+
+.to-do-design {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin: auto;
+  padding: 2em 0;
+}
+
+#todo-description {
+  background-color: var(--white);
+  border: none;
+  border-radius: 0.4rem;
+  padding: 1rem;
+  margin-right: 0.5em;
+}
+
+#todo-description:focus-within {
+  outline: 1.5px solid var(--yellow-color);
+}
+
+#filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#add-btn,
+#btn-delete-all {
+  border-radius: 5px;
+  border: hidden;
+  padding: 1rem;
+  background-color: var(--blue-color);
+  color: var(--white);
+  box-shadow: 3px 3px var(--pink-color);
+  cursor: pointer;
+}
+
+#add-btn:focus-within,
+#btn-delete-all:focus-within {
+  outline: 2px solid var(--yellow-color);
+}
+
+.your-todos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.your-todos > h2 {
+  margin-top: 1em;
+}
+
+input[type="radio"] {
+  border: 2px solid var(--yellow-color);
+  cursor: pointer;
+}
+
+input[type="radio"]:checked {
+  appearance: none;
+  padding: 0.3rem;
+  border: 2px solid var(--yellow-color);
+  width: 0.5rem;
+  height: 0.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: var(--blue-color);
+}
+
+input[type="checkbox"]:checked {
+  accent-color: var(--light-green);
+}
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+}
+
+#todo-list {
+  list-style: none;
+}

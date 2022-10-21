@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="https://unpkg.com/browse/normalize.css@7.0.0/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Todo</h1>
+        <p>What are your plans for today?</p>
+    </header>
+    <main class="main-page">
+        <div class="to-do-design">
+            <form id="input-wrapper" onsubmit="return false">
+                <input type="text" id="todo-description" placeholder="Get sh*t done!" />
+                <label for="todo-description"></label>
+                <button id="add-btn">What's next?</button>
+            <section id="filter">
+                <h2>Filter & Options</h2>
+                <div class="radio-container">
+                    <input type="radio" name="filter" id="filter-all" class="filter-button" value="all" />
+                    <label for="filter-all">All</label>
+                    <input type="radio" name="filter" id="filter-open" class="filter-button" value="open"/>
+                    <label for="filter-open">Open</label>
+                    <input type="radio" name="filter" id="filter-done" class="filter-button" value="done" />
+                    <label for="filter-done">Done</label>
+                </div>
+                <button id="btn-delete-all" onsubmit="return false">Remove Done Todo's</button> 
+            </section>
+            <section class="your-todos">
+                <h2>Your stuff here...</h2>
+                <ul id="todo-list"></ul>
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
